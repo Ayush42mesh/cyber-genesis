@@ -14,7 +14,7 @@ app.use(express.json());
 // Serve Vite build if available, otherwise fall back to legacy public/
 const clientDist = path.join(__dirname, 'client', 'dist');
 const publicDir = path.join(__dirname, 'public');
-const staticDir = fs.existsSync(clientDist) ? clientDist : publicDir;
+const staticDir = path.join(__dirname, 'client');
 app.use(express.static(staticDir));
 
 // ─── In-memory state ───────────────────────────────────────────────────────────
