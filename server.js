@@ -23,41 +23,29 @@ let gameState = {
   timerRemaining: 20,
   timerInterval: null,
   questions: [
-    {
-      id: 1,
-      text: "What does 'SQL Injection' primarily exploit?",
-      options: ["Buffer overflow vulnerability", "Improper input sanitization", "Weak password hashing", "Unencrypted network traffic"],
-      correct: 1,
-      points: 100
-    },
-    {
-      id: 2,
-      text: "Which OSI layer does TCP operate at?",
-      options: ["Layer 2 - Data Link", "Layer 3 - Network", "Layer 4 - Transport", "Layer 7 - Application"],
-      correct: 2,
-      points: 100
-    },
-    {
-      id: 3,
-      text: "What encryption algorithm uses a 256-bit key by default?",
-      options: ["DES", "3DES", "AES-256", "RSA-128"],
-      correct: 2,
-      points: 100
-    },
-    {
-      id: 4,
-      text: "In cybersecurity, what is a 'zero-day' vulnerability?",
-      options: ["A vulnerability with no fix available", "A virus that deletes files at midnight", "An attack that takes zero seconds", "A firewall with zero rules"],
-      correct: 0,
-      points: 150
-    },
-    {
-      id: 5,
-      text: "Which protocol is used for secure key exchange over an insecure channel?",
-      options: ["FTP", "Diffie-Hellman", "Telnet", "HTTP"],
-      correct: 1,
-      points: 150
-    }
+    { id: 1, text: "What does CPU stand for?", options: ["Central Processing Unit", "Computer Personal Unit", "Central Program Utility", "Control Processing Unit"], correct: 0, points: 100 },
+    { id: 2, text: "Which data structure follows the FIFO principle?", options: ["Stack", "Queue", "Tree", "Graph"], correct: 1, points: 100 },
+    { id: 3, text: "Which programming language is primarily used for web page structure?", options: ["Python", "HTML", "C++", "Java"], correct: 1, points: 100 },
+    { id: 4, text: "What does RAM stand for?", options: ["Random Access Memory", "Read Access Memory", "Run Access Memory", "Rapid Access Module"], correct: 0, points: 100 },
+    { id: 5, text: "Which company developed the Windows operating system?", options: ["Apple", "Google", "Microsoft", "IBM"], correct: 2, points: 100 },
+    { id: 6, text: "Which symbol is used for comments in Python (single line)?", options: ["//", "#", "/* */", "--"], correct: 1, points: 100 },
+    { id: 7, text: "Which device is used to connect multiple networks together?", options: ["Switch", "Hub", "Router", "Modem"], correct: 2, points: 100 },
+    { id: 8, text: "Which database language is used to retrieve data from a database?", options: ["SQL", "HTML", "CSS", "XML"], correct: 0, points: 100 },
+    { id: 9, text: "What does HTTP stand for?", options: ["Hyper Text Transfer Protocol", "High Transfer Text Protocol", "Hyper Tool Transfer Protocol", "Host Transfer Text Protocol"], correct: 0, points: 200 },
+    { id: 10, text: "Which company created Java?", options: ["Sun Microsystems", "Microsoft", "IBM", "Google"], correct: 0, points: 200 },
+    { id: 11, text: "Which sorting algorithm has the best average time complexity?", options: ["Bubble Sort", "Quick Sort", "Selection Sort", "Insertion Sort"], correct: 1, points: 200 },
+    { id: 12, text: "Which number system uses base 2?", options: ["Decimal", "Binary", "Octal", "Hexadecimal"], correct: 1, points: 200 },
+    { id: 13, text: "What does GUI stand for?", options: ["Graphical User Interface", "General User Interaction", "Graphic Utility Interface", "Global User Interface"], correct: 0, points: 200 },
+    { id: 14, text: "Which protocol is used to send emails?", options: ["SMTP", "FTP", "HTTP", "TCP"], correct: 0, points: 200 },
+    { id: 15, text: "Which language is used for Android app development mainly?", options: ["Swift", "Kotlin", "Ruby", "PHP"], correct: 1, points: 200 },
+    { id: 16, text: "Which data structure uses LIFO principle?", options: ["Queue", "Stack", "Linked List", "Tree"], correct: 1, points: 200 },
+    { id: 17, text: "Which company developed the Python programming language?", options: ["Google", "Microsoft", "Python Software Foundation", "IBM"], correct: 2, points: 200 },
+    { id: 18, text: "Which key is used to refresh a webpage in most browsers?", options: ["F3", "F5", "F8", "F10"], correct: 1, points: 200 },
+    { id: 19, text: "Which algorithm is used by the Banker's Algorithm to avoid deadlock?", options: ["Resource Allocation Graph", "Safe State Detection", "Preemption Algorithm", "Wait-Die Scheme"], correct: 1, points: 500 },
+    { id: 20, text: "What is the time complexity of Binary Search?", options: ["O(n)", "O(log n)", "O(n log n)", "O(1)"], correct: 1, points: 500 },
+    { id: 21, text: "Which normal form removes transitive dependency in DBMS?", options: ["1NF", "2NF", "3NF", "BCNF"], correct: 2, points: 500 },
+    { id: 22, text: "Which algorithm is used to find the shortest path in a weighted graph without negative edges?", options: ["Prim's Algorithm", "Kruskal's Algorithm", "Dijkstra's Algorithm", "Floyd Warshall"], correct: 2, points: 500 },
+    { id: 23, text: "Which OS scheduling algorithm may cause starvation?", options: ["Round Robin", "FCFS", "Priority Scheduling", "Multilevel Queue"], correct: 2, points: 500 }
   ],
   players: {},    // socketId -> { name, score, answers: [{qIdx, option, timestamp, rank}] }
   responses: {},  // questionIndex -> [{ socketId, name, option, timestamp, rank }]
